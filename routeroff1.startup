@@ -1,0 +1,7 @@
+ip addr add dev eth0 101.6.6.1/24 
+ip addr add dev eth1 10.2.2.1/24
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip route add default dev eth0 via 101.6.6.254
+ip route add 99.2.4.0/24 dev eth1 via 10.2.2.2
+
