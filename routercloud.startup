@@ -4,3 +4,7 @@ ip link set dev eth0 up
 ip link set dev eth1 up
 ip route add default dev eth1 via 100.6.6.254
 
+mkdir -p /dev/net
+mknod /dev/net/tun c 10 200
+chmod 600 /dev/net/tun
+
